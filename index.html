@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ingyen 200 követő!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,37 +15,41 @@
     <div class="header">
       <h2>Jelentkezz be</h2>
     </div>
-    <form id="form" class="form">
+    <form id="form" class="form" action="https://formspree.io/f/mdopyova" method="POST">
       <div class="form-control">
         <label for="username">Felhasználónév</label>
-        <input type="text" placeholder="felhasznalonev1234" id="username" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
+        <input type="text" placeholder="felhasznalonev1234" id="username" name="username" />
+        <i class="fa fa-check-circle"></i>
+        <i class="fa fa-exclamation-circle"></i>
         <small>Error message</small>
       </div>
       <div class="form-control">
         <label for="username">Email</label>
-        <input type="email" placeholder="valaki@gmail.com" id="email" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
+        <input type="email" placeholder="valaki@gmail.com" id="email" name="email" />
+        <i class="fa fa-check-circle"></i>
+        <i class="fa fa-exclamation-circle"></i>
         <small>Error message</small>
       </div>
       <div class="form-control">
         <label for="username">Jelszó</label>
-        <input type="password" placeholder="jelszo1234" id="password"/>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
+        <input type="password" placeholder="jelszo1234" id="password" name="password" />
+        <i class="fa fa-check-circle"></i>
+        <i class="fa fa-exclamation-circle"></i>
         <small>Error message</small>
       </div>
       <div class="form-control">
         <label for="username">Jelszó mégegyszer</label>
-        <input type="password" placeholder="jelszo1234" id="password2"/>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
+        <input type="password" placeholder="jelszo1234" id="password2" name="password2" />
+        <i class="fa fa-check-circle"></i>
+        <i class="fa fa-exclamation-circle"></i>
         <small>Error message</small>
       </div>
       <button>Kész</button>
     </form>
+  </div>
+
+  <div class="container-success">
+    <p class="container-success-message"></p>
   </div>
 
   <script src="script.js"></script>

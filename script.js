@@ -62,27 +62,11 @@ function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-// SOCIAL PANEL JS
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
-
-floating_btn.addEventListener('click', () => {
-	social_panel_container.classList.toggle('visible')
-});
-
-close_btn.addEventListener('click', () => {
-	social_panel_container.classList.remove('visible')
-});
+$("button").on('click', () => {
+  if(usernameValue !== '' && emailValue !== '' && isEmail(emailValue) && passwordValue !== '' && password2Value !== '' && passwordValue === password2Value) {
+    $(".container").css("display: none")
+    $(".container-success").css("display: block")
+    $(".container-success-message").css("display: block")
+    $(".container-success-message").text(`24 órán belül megkapod a(z) ${usernameValue} fiókodra a kívánt 200 követőt.`)
+  }
+}); 
